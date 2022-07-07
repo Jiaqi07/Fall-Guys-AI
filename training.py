@@ -3,15 +3,16 @@ import time
 import cv2
 from utils.grabscreen import grab_screen
 
+
 def label_func(x): return x.parent.name
 
+
 def run():
-    path = Path("E:/DoorDash/")
+    path = Path("C:/trainData/")
     fnames = get_image_files(path)
     print(f"Total Images:{len(fnames)}")
 
-
-    dls = ImageDataLoaders.from_path_func(path, fnames, label_func,bs=40, num_workers=0)
+    dls = ImageDataLoaders.from_path_func(path, fnames, label_func, bs=40, num_workers=0)
     learn = cnn_learner(dls, resnet18, metrics=error_rate)
     print("Loaded")
     learn.fine_tune(4, base_lr=1.0e-02)
