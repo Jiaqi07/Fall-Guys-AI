@@ -27,16 +27,16 @@ count_click = 0
 for data in holder_list:
     if data[1] == 'W':
         count_up += 1
-        cv2.imwrite(f"C:/trainData/H7-u{count_up}.png", data[0])
+        cv2.imwrite(f"C:/trainData/Nothing/H7-u{count_up}.png", data[0])
     elif data[1] == 'A':
         count_left += 1
-        cv2.imwrite(f"C:/trainData/H7-l{count_left}.png", data[0])
+        cv2.imwrite(f"C:/trainData/Left/H7-l{count_left}.png", data[0])
     elif data[1] == 'D':
         count_right += 1
-        cv2.imwrite(f"C:/trainData/H7-r{count_right}.png", data[0])
+        cv2.imwrite(f"C:/trainData/Right/H7-r{count_right}.png", data[0])
     elif data[1] == ' ':
         count_jump += 1
-        cv2.imwrite(f"C:/trainData/H7-j{count_jump}.png", data[0])
+        cv2.imwrite(f"C:/trainData/Jump/H7-j{count_jump}.png", data[0])
     elif data[1] == 'L':
         count_click += 1
-        cv2.imwrite(f"C:/trainData/H7-c{count_click}.png", data[0])
+        cv2.imwrite(f"C:/trainData/Mouse/H7-c{count_click}.png", data[0])

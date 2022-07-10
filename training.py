@@ -4,6 +4,14 @@ import cv2
 from utils.grabscreen import grab_screen
 
 
+def label_func_debug(x):
+    print("\n x: ", x)
+    print("\n x.name: ", x.name)
+    print("\n x.name[3]: ", x.name[3])
+    print("\n x.parent: ", x.parent)
+    print("\n x.parent.name: ", x.parent.name)
+    return x.parent.name
+
 def label_func(x): return x.parent.name
 
 

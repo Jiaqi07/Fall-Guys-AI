@@ -44,9 +44,13 @@ while True:
     # cv2.waitKey(1)
     start_time = time.time()
     result = learn_inf.predict(image)
-    action = result[0]
-    # print(result[2][0].item(), result[2][1].item(), result[2][2].item(), result[2][3].item())
-
+    try :
+        action = result[0].item()
+        print(result[2][0].item(), result[2][1].item(), result[2][2].item(), result[2][3].item())
+        print("\n action: ", action)
+        print("\n")
+    except:
+        continue
     # action = random.randint(0,3)
 
     if action == "Jump" or result[2][0] > .1:

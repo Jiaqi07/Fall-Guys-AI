@@ -6,8 +6,8 @@ import os
 from utils.grabscreen import grab_screen
 from utils.getkeys import key_check, mouse_check
 
-file_name = "C:/Users/ac913/PycharmProjects/Fall-Guys-AI/data/training_data.npy"
-file_name2 = "C:/Users/ac913/PycharmProjects/Fall-Guys-AI/data/target_data.npy"
+file_name = "data/training_data.npy"
+file_name2 = "data/target_data.npy"
 
 
 def get_data():
@@ -58,7 +58,7 @@ while True:
     keys = key_check()
     mouse = mouse_check()
 
-    targets.append(mouse)  # Left Click
+    # targets.append(mouse)  # Left Click
     targets.append(keys)
     if keys == "H":
         break
