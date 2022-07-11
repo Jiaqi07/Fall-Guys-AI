@@ -45,8 +45,8 @@ while True:
     start_time = time.time()
     result = learn_inf.predict(image)
     try :
-        action = result[0].item()
-        print(result[2][0].item(), result[2][1].item(), result[2][2].item(), result[2][3].item())
+        action = result[0]
+        print(result[2][0].item(), result[2][1].item(), result[2][2].item())
         print("\n action: ", action)
         print("\n")
     except:
